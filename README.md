@@ -18,3 +18,4 @@ This robot uses 4 PID regulators:
 * for holding desired angle between robot chassis and a ground
 * for controlling motor angle to obtain desired speed of the whole robot
 
+![pid diagram](/img/diagram_pid.png)
