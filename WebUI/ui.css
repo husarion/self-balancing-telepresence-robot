@@ -1,0 +1,477 @@
+@font-face {
+  font-family: 'latolight';
+  src: url('https://static.husarion.com/fonts/lato-light-webfont.eot');
+  src: url('https://static.husarion.com/fonts/lato-light-webfont.eot?#iefix') format('embedded-opentype'),
+  url('https://static.husarion.com/fonts/lato-light-webfont.woff2') format('woff2'),
+  url('https://static.husarion.com/fonts/lato-light-webfont.woff') format('woff'),
+  url('https://static.husarion.com/fonts/lato-light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 360px;
+    min-width: 320px;
+}
+
+body {
+    height:100% !important;
+    margin: 0;
+    padding: 0;
+    background-image: url('bg.png') !important;
+    background-attachment: fixed !important;
+    background-position: 0 0;
+    font-family: "latolight", helvetica, arial, sans-serif;
+    min-width: 320px;
+}
+
+@media only screen and (min-width: 1921px) {
+    body {
+        background-size: 100% 100%;
+    }
+}
+
+button, a, span {
+    font-family: "latolight", helvetica, arial, sans-serif;
+}
+
+#inactive-info {
+    display: none !important;
+}
+
+#stop {
+    width: 220px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
+    font-size: 30px;
+}
+
+#manipulator {
+    background: url('bg_manipulator.png') top left no-repeat;
+    width: 273px;
+    height: 290px;
+    /*opacity: ;*/
+    position: fixed;
+    left: 30px;
+    bottom: 80px;
+}
+
+#manipulator button {
+    position: absolute;
+    display: none;
+}
+
+button:active, button:hover  {
+    border: 1px #f00 solid !important;
+    background: #f00;
+}
+
+#manipulator #move_up {
+    top: 0;
+    left: 50%;
+}
+
+#manipulator #move_left {
+    top: 50%;
+    left: 0;
+}
+
+#manipulator #move_right {
+    top: 50%;
+    right: 0;
+}
+
+#manipulator #move_down {
+    left: 50%;
+    bottom: 0;
+}
+
+#manipulator .nipple {
+    opacity: 0.8 !important;
+}
+
+#manipulator .back {
+    opacity: 1 !important;
+    background: none !important;
+}
+
+#manipulator .front {
+    opacity: 1 !important;
+    border: 1px #fff solid !important;
+    background: transparent !important;
+}
+
+#gearbox-wrapper {
+    position: absolute;
+    background: url('bg_gearbox.png') 0 0 no-repeat;
+    width: 98px;
+    height: 176px;
+    left: 350px;
+    bottom: 145px
+}
+
+#gearbox {
+    position: absolute;
+    top: 36px;
+    left: 60px;
+    width: 54px;
+    height: 124px;
+}
+
+#gear_selector {
+    width: 50px;
+    height: 10px;
+    background: rgba(0,0,0,0);
+    padding: 2px;
+    outline: 1px #fff solid;
+}
+
+#gear_selector .inner {
+    background: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+#gear_selector.g3 {
+    top: 0;
+}
+
+#gear_selector.g2 {
+    top: 56px;
+}
+
+#gear_selector.g1 {
+    top: 112px;
+}
+
+
+#video-wrapper {
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 33%;
+    height: 80%;
+    display: block;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#video-container {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+.corner {
+    width: 7%;
+    height: 6%;
+    border: 2px #ccc solid;
+    position: absolute;
+}
+
+.corner.tl {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+}
+
+.corner.tr {
+    top: 0;
+    right: 0;
+    border-left: none;
+    border-bottom: none;
+}
+
+.corner.bl {
+    bottom: 0;
+    left: 0;
+    border-top: none;
+    border-right: none;
+}
+
+.corner.br {
+    bottom: 0;
+    right: 0;
+    border-top: none;
+    border-left: none;
+}
+
+
+#video-container #video-native {
+    display: none;
+}
+
+#video-container #subscriber-top {
+    position: static !important;
+    width: 100%;
+    height: 100%;
+}
+
+
+#battery-level-wrapper {
+    position: absolute;
+    top: 10%;
+    margin-top: -20px;
+    left: 50px;
+    width: 195px;
+    height: 25px;
+}
+
+#battery-level-wrapper .left, #battery-level-wrapper .right {
+    width: 20px;
+    height: 27px;
+    border: 2px #ccc solid;
+    position: absolute;
+}
+
+#battery-level-wrapper .left {
+    top: 20px;
+    left: 0px;
+    border-right: 0;
+}
+
+#battery-level-wrapper .right {
+    border-left: 0;
+    top: 20px;
+    right: 0px;
+}
+
+#battery-level-wrapper .inner {
+    position: absolute;
+    border: 1px #666 solid;
+    width: 182px;
+    height: 20px;
+    top: 24px;
+    left: 5px;
+    padding-left: 1px;
+    padding-top: 1px;
+}
+
+#battery-level-wrapper .title {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: #ccc;
+    font-size: 10px;
+}
+
+#battery-level-wrapper .step {
+    width: 12px;
+    height: 19px;
+    background: #ccc;
+    margin-right: 1px;
+    float: left;
+}
+
+#battery-level-wrapper .step:last-of-type {
+    border-right: 0;
+}
+
+
+
+#status-container {
+    position: absolute;
+    margin: auto;
+    right: 20px;
+    top: 20px;
+    width: 220px; 
+    height: 250px; 
+    display: none;
+    /* border:3px solid #73AD21; */
+}
+
+#console_container {
+    position: absolute;
+    top: 10%;
+    right: 80px;
+    width: 280px;
+    height: 130px;
+    border: 1px #999 solid;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+#cl1 {
+    overflow-y: auto;
+    border: none;
+}
+
+#loadingspinner {
+    display: none !important;
+}
+
+#publisher {
+    height: 158px !important;
+}
+
+#publisher-top {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+#publisher-top, #publisher-top #publisher, #publisher-top .OT_video-element, #publisher-top .OT_widget-container {
+    border-radius: 15px !important;
+}
+
+#publisher-top .OT_bar {
+    border-radius: 15px 15px 0 0;
+}
+
+
+.show_mobile {
+    display: none;
+}
+
+.hide_mobile {
+    display: block;
+}
+
+#controls {
+    display: none;
+}
+
+#status-container {
+    color: #fff;
+}
+
+
+@media only screen and (max-width: 1399px) {
+    #manipulator {
+        bottom: 20px;
+        left: -20px;
+    }
+
+    #gearbox-wrapper {
+        bottom: 86px;
+        left: 240px;
+    }
+
+    #console_container {
+        width: 220px;
+    }
+    
+    #stop {
+        width: 220px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    #manipulator {
+        bottom: 0;
+        left: -40px;
+    }
+
+    #gearbox-wrapper {
+        bottom: 66px;
+        left: 200px;
+    }
+
+
+
+}
+
+
+
+
+@media only screen and (max-height: 480px), only screen and (max-width: 961px) {
+    .show_mobile {
+        display: block;
+    }
+
+    .hide_mobile {
+        display: none;
+    }
+
+    #console_container {
+        display: none;
+    }
+
+    #battery-level-wrapper {
+        display: none;
+    }
+
+    #video-wrapper {
+        width: 100%;
+        height: 100%;
+    }
+    .corner {
+        display: none;
+    }
+    #manipulator {
+        background: url('bg_manipulator_mobile.png') top left no-repeat;
+        width: 200px;
+        height: 212px;
+        left: -25px;
+        bottom: 30px;
+    }
+    
+    #stop {
+        width: 220px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 30px;
+    }
+
+    #gearbox-wrapper {
+        left: auto;
+        right: 18px;
+        bottom: 78px;
+        background: url('bg_gearbox_mobile.png') 0 0 no-repeat;
+        width: 45px;
+        height: 129px;
+    }
+
+    #gearbox {
+        top: 25px;
+        left: 20px;
+        width: 40px;
+        height: 100px;
+    }
+
+    #gear_selector {
+        width: 30px;
+    }
+
+    #gear_selector.g3 {
+        top: 0;
+    }
+
+    #gear_selector.g2 {
+        top: 40px;
+    }
+
+    #gear_selector.g1 {
+        top: 80px;
+    }
+    
+    
+    #publisher {
+        width: 108px;
+    }
+    
+    #publisher-top {
+        position: absolute;
+        bottom: auto;
+        right: 10px;
+        top: 10px;
+    }
+    
+    #video-wrapper {
+        padding: 0;
+    }
+}
+

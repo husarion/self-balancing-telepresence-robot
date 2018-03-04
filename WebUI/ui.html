@@ -1,0 +1,68 @@
+<!doctype html>
+<html id="spy_robot">
+<head>
+    <script src="/static/robocore.js"></script>
+    <script src="WebUI/jquery.mCustomScrollbar.concat.min.js" defer></script>
+    <script src="WebUI/nipplejs.min.js" defer></script>
+    <script src="WebUI/jquery.ui.touch-punch.js" defer></script>
+    
+    <link href="WebUI/ui.css" rel="stylesheet">
+    <link href="WebUI/jquery.mCustomScrollbar.css" rel="stylesheet">
+    
+    <meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1">
+</head>
+<body>
+
+<div id="video-wrapper">
+    <div class="tl corner"></div>
+    <div class="tr corner"></div>
+    <div class="bl corner"></div>
+    <div class="br corner"></div>
+    <div id="video-container" fitmode="cut"></div>
+</div>
+
+<div id="manipulator">
+    <button type-active id="move_up">&nbsp;</button>
+    <button type-active id="move_left">&nbsp;</button>
+    <button type-active id="move_down">&nbsp;</button>
+    <button type-active id="move_right">&nbsp;</button>
+</div>
+
+<div id="gearbox-wrapper">
+    <div id="gearbox">
+        <div id="gear_selector" class="g2">
+            <div class="inner"></div>
+        </div>
+    </div>
+</div>
+
+<div id="controls">
+    <button type-active id="g1">1</button>
+    <button type-active id="g2">2</button>
+    <button type-active id="g3">3</button>
+</div>
+
+<button type-active id="stop">start</button>
+
+<div id="battery-level-wrapper">
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="title">BATTERY LEVEL</div>
+    <div class="inner">
+
+    </div>
+</div>
+
+<div id="status-container">
+    <div id="div_battery">Battery: <label id="lb_bat">10V</label></div>
+    <label id="l1">label1</label>
+</div>
+
+<div id="console_container">
+    <console id="cl1"></console>
+</div>
+
+<script src="WebUI/spy_robot.js"></script>
+
+</body>
+</html>
