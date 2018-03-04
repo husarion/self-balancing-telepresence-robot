@@ -20,7 +20,7 @@ Self balancing telepresence robot is controlled worldwide from a web user interf
 * 1 servo for leg
 * 3 x 18650 Li-ION batteries holder (up to 8h of operation without charging)
 
-## Stabilizating algorithm overview ##
+## Stabilization algorithm overview ##
 
 ![pid diagram](/img/diagram_pid.png)
 
